@@ -19,7 +19,7 @@ function Reset() {
   let loadData = async () => {
 
     try {
-      let verifiction = await axios.get("https://passwordreset-flow.herokuapp.com/token-verify", {
+      let verifiction = await axios.get("https://password-reset-bdmp.onrender.com/token-verify", {
         headers: {
           'authorization': token
         }
@@ -58,7 +58,7 @@ function Reset() {
     onSubmit: async (values) => {
       try {
         console.log(values)
-        await axios.put("https://passwordreset-flow.herokuapp.com/update", values, {
+        await axios.put("https://password-reset-bdmp.onrender.com/update", values, {
           headers: {
             'authorization': token
           }
