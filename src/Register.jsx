@@ -24,7 +24,7 @@ function Register() {
     onSubmit: async (values) => {
       try {
         console.log(values)
-        let loginData = await axios.post("https://passwordreset-flow.herokuapp.com/user", values)
+        let loginData = await axios.post("https://password-reset-bdmp.onrender.com/", values)
         setInitial(loginData.data.messege)
         alert("Verify your email address")
       } catch (error) {
